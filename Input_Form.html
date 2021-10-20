@@ -87,6 +87,15 @@
                 telError.textContent="";
             else telError.textContent = "Telephone Number is Incorrect";
         });
+        //Valid Password Rule 1
+        const password = document.querySelector('#password');
+        const passwordError = document.querySelector('.password-error');
+        password.addEventListener('input',function() {
+            let passwordRegex = RegExp('^[A-Z]{1}[a-z]{8,}$');
+            if(passwordRegex.test(password.value))
+                passwordError.textContent="";
+            else passwordError.textContent = "Password is Incorrect";
+        });
     //salary range setting
     const salary = document.querySelector('#salary');
         const output = document.querySelector('.salary-output');
