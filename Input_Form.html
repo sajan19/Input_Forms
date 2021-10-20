@@ -78,6 +78,15 @@
                 emailError.textContent="";
             else emailError.textContent = "Email is Incorrect";
         });
+           //adding evenlistener telephone
+           const tel = document.querySelector('#tel');
+        const telError = document.querySelector('.tel-error');
+        tel.addEventListener('input',function() {
+            let telRegex = RegExp('^([0-9]{2}[\\-])*[0-9]{10}$');
+            if(telRegex.test(tel.value))
+                telError.textContent="";
+            else telError.textContent = "Telephone Number is Incorrect";
+        });
     //salary range setting
     const salary = document.querySelector('#salary');
         const output = document.querySelector('.salary-output');
